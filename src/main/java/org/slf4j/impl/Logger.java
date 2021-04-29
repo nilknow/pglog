@@ -15,7 +15,7 @@ public class Logger implements org.slf4j.Logger {
     private LogContext logContext;
     private List<Logger> children = new ArrayList<>();
     private List<LogHandler> handlers = new ArrayList<>();
-    private Level effectiveLevel=Level.INFO;
+    private Level effectiveLevel=Level.ALL;
 
     public Logger(String name, Logger parent, LogContext logContext) {
         this.name = name;
@@ -39,7 +39,7 @@ public class Logger implements org.slf4j.Logger {
 
     @Override
     public void trace(String msg) {
-
+        log(Level.TRACE, msg);
     }
 
     @Override
@@ -99,7 +99,7 @@ public class Logger implements org.slf4j.Logger {
 
     @Override
     public void debug(String msg) {
-
+        log(Level.DEBUG, msg);
     }
 
     @Override
@@ -159,7 +159,7 @@ public class Logger implements org.slf4j.Logger {
 
     @Override
     public void info(String msg) {
-
+        log(Level.INFO, msg);
     }
 
     @Override
@@ -219,7 +219,7 @@ public class Logger implements org.slf4j.Logger {
 
     @Override
     public void warn(String msg) {
-
+        log(Level.WARN,msg);
     }
 
     @Override

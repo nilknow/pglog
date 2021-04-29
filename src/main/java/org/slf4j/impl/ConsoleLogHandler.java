@@ -2,6 +2,7 @@ package org.slf4j.impl;
 
 import java.io.IOException;
 import java.io.OutputStream;
+import java.nio.charset.StandardCharsets;
 
 public class ConsoleLogHandler implements LogHandler{
     private static final OutputStream out = System.out;
@@ -12,6 +13,7 @@ public class ConsoleLogHandler implements LogHandler{
         byte[] msg = eventParser.parse(logEvent);
         try {
             out.write(msg);
+            out.write("\n".getBytes(StandardCharsets.UTF_8));
         } catch (IOException e) {
             e.printStackTrace();
         }
