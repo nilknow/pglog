@@ -19,3 +19,9 @@ toy log framework which can work with slf4j
 1. log output to console or file or both?
    that's what [LogHandler](./src/main/java/org/slf4j/impl/LogHandler.java) is for.
 2. how log info was presented?
+
+
+## todo 
+1. add configuration function
+2. make error level special
+3. add file logHandler
