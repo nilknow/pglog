@@ -12,6 +12,7 @@ public class ConsoleLogHandler implements LogHandler{
     public void publish(LogEvent logEvent) {
         byte[] msg = eventParser.parse(logEvent);
         try {
+            out.write(("["+logEvent.getLevel().levelStr()+"]").getBytes(StandardCharsets.UTF_8));
             out.write(msg);
             out.write("\n".getBytes(StandardCharsets.UTF_8));
         } catch (IOException e) {

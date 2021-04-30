@@ -21,4 +21,8 @@ public class Level {
     public int levelInt(){
         return this.levelInt;
     }
+
+    public String levelStr() {
+        return this.description;
+    }
 }

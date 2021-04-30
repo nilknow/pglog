@@ -15,6 +15,10 @@ public class LogEvent {
         this.instant = Instant.now();
     }
 
+    public Level getLevel() {
+        return level;
+    }
+
     public String getMsg(){
         return this.msg;
     }
