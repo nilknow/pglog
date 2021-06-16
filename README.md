@@ -1,4 +1,4 @@
-# plog
+# pglog
 toy log framework which can work with slf4j
 
 ## design
